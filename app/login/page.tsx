@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { ApiError } from "@/lib/api-client";
 import { Button } from "@/components/ui/button";
@@ -12,10 +12,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState < string | null > (null);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    console.log("Current API URL:", process.env.NEXT_PUBLIC_API_URL);
-  }, []);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
