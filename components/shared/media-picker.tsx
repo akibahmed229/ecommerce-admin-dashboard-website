@@ -15,7 +15,7 @@ export function MediaPicker({ value, onChange }: { value?: string; onChange: (me
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild><Button type="button" variant="outline" size="sm">{value ? "Change image" : "Choose from library"}</Button></DialogTrigger>
+      <DialogTrigger><Button type="button" variant="outline" size="sm">{value ? "Change image" : "Choose from library"}</Button></DialogTrigger>
       <DialogContent className="max-w-2xl">
         <DialogHeader><DialogTitle>Choose an image</DialogTitle></DialogHeader>
         <Input placeholder="Search…" value={search} onChange={(e) => setSearch(e.target.value)} />
