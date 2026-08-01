@@ -60,7 +60,7 @@ export default function MediaPage() {
         <PermissionGate permission="media:upload">
           <div>
             <Input type="file" multiple accept="image/*,video/*" onChange={onUpload} disabled={uploading} className="hidden" id="file-upload" />
-            <Label htmlFor="file-upload"><Button asChild><span>{uploading ? "Uploading…" : "Upload files"}</span></Button></Label>
+            <Label htmlFor="file-upload"><Button><span>{uploading ? "Uploading…" : "Upload files"}</span></Button></Label>
           </div>
         </PermissionGate>
       </div>
