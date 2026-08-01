@@ -86,7 +86,7 @@ export default function UsersPage() {
           </div>
           <div className="space-y-1">
             <Label>Role {isSelf && <span className="text-xs text-muted-foreground">(can't change your own role)</span>}</Label>
-            <Select value={form.roleId} onValueChange={(v) => setForm({ ...form, roleId: v })} disabled={isSelf} required>
+            <Select value={form.roleId} onValueChange={(v) => setForm({ ...form, roleId: v as string })} disabled={isSelf} required>
               <SelectTrigger><SelectValue placeholder="Select a role" /></SelectTrigger>
               <SelectContent>{roleOptions?.map((r) => <SelectItem key={r.id} value={r.id}>{r.name}</SelectItem>)}</SelectContent>
             </Select>
