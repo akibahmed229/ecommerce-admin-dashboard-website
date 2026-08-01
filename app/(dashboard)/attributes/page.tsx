@@ -83,7 +83,7 @@ export default function AttributesPage() {
           <div className="space-y-1"><Label>Slug</Label><Input value={attrForm.slug} onChange={(e) => setAttrForm({ ...attrForm, slug: e.target.value })} required /></div>
           <div className="space-y-1">
             <Label>Type</Label>
-            <Select value={attrForm.type} onValueChange={(v) => setAttrForm({ ...attrForm, type: v })}>
+            <Select value={attrForm.type} onValueChange={(v) => setAttrForm({ ...attrForm, type: v as string })}>
               <SelectTrigger><SelectValue /></SelectTrigger>
               <SelectContent>{TYPES.map((t) => <SelectItem key={t} value={t}>{t.replace("_", " ")}</SelectItem>)}</SelectContent>
             </Select>
